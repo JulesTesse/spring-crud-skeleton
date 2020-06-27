@@ -1,7 +1,6 @@
 package com.extia.cinema.services.impl;
 
 import com.extia.cinema.datas.Movie;
-import com.extia.cinema.exceptions.BadRequestException;
 import com.extia.cinema.exceptions.NotFoundException;
 import com.extia.cinema.repositories.IMovieRepository;
 import com.extia.cinema.services.IMovieService;

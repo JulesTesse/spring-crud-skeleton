@@ -62,7 +62,7 @@ public class CategoryController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity create(@PathVariable("id") Integer id){
+    public ResponseEntity delete(@PathVariable("id") Integer id){
         try {
             categoryService.delete(id);
             return new ResponseEntity<>(HttpStatus.OK);

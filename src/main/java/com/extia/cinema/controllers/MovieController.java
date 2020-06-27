@@ -1,6 +1,5 @@
 package com.extia.cinema.controllers;
 
-import com.extia.cinema.datas.Category;
 import com.extia.cinema.datas.Movie;
 import com.extia.cinema.exceptions.BadRequestException;
 import com.extia.cinema.exceptions.GlobalCinemaException;
