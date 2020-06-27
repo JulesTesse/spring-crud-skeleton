@@ -1,4 +1,6 @@
 package com.extia.cinema.repositories;
 
-public interface ICategoryRepository {
+import com.extia.cinema.datas.Category;
+
+public interface ICategoryRepository extends IGenericRepository<Category, Integer> {
 }
