@@ -4,5 +4,5 @@ import com.extia.cinema.datas.Movie;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface IMovieRepository extends IGenericRepository<Movie, Integer> {
+public interface IMovieRepository extends IGenericRepository<Movie, Long> {
 }
