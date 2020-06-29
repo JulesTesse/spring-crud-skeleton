@@ -43,7 +43,7 @@ public class MovieController {
     public ResponseEntity<Movie> create(@RequestBody @Validated Movie movie){
         try {
             Movie movieCreated = movieService.update(movie);
-            return new ResponseEntity<>(movieCreated, HttpStatus.OK);
+            return new ResponseEntity<>(movieCreated, HttpStatus.CREATED);
         }catch(BadRequestException e){
             log.error("Bad request when creating movie",e);
             throw e;
