@@ -7,10 +7,10 @@ import org.springframework.test.context.web.WebAppConfiguration;
 
 @WebAppConfiguration
 @RunWith(SpringRunner.class)
-class CinemaApplicationTests {
+public class CinemaApplicationTest {
 
 	@Test
-	void contextLoads() {
+	public void contextLoads() {
 	}
 
 }
