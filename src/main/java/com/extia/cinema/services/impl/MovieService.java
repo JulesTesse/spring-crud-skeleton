@@ -22,7 +22,7 @@ public class MovieService implements IMovieService {
     }
 
     @Override
-    public Movie findById(Integer id) {
+    public Movie findById(Long id) {
         Optional<Movie> optionalMovie = movieRepository.findById(id);
         if (optionalMovie.isEmpty()) {
             throw new NotFoundException("Movie with id " + id + " not found");
@@ -43,7 +43,7 @@ public class MovieService implements IMovieService {
     }
 
     @Override
-    public void delete(Integer id) {
+    public void delete(Long id) {
         Movie toDelete = this.findById(id);
         this.movieRepository.delete(toDelete);
     }

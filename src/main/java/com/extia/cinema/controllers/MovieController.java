@@ -29,7 +29,7 @@ public class MovieController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Movie> getOneById(@PathVariable("id") Integer id) {
+    public ResponseEntity<Movie> getOneById(@PathVariable("id") Long id) {
         try {
             Movie movie = movieService.findById(id);
             return new ResponseEntity<>(movie, HttpStatus.OK);
@@ -43,7 +43,7 @@ public class MovieController {
     public ResponseEntity<Movie> create(@RequestBody @Validated Movie movie){
         try {
             Movie movieCreated = movieService.update(movie);
-            return new ResponseEntity<>(movieCreated, HttpStatus.OK);
+            return new ResponseEntity<>(movieCreated, HttpStatus.CREATED);
         }catch(BadRequestException e){
             log.error("Bad request when creating movie",e);
             throw e;
@@ -62,7 +62,7 @@ public class MovieController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity delete(@PathVariable("id") Integer id){
+    public ResponseEntity delete(@PathVariable("id") Long id){
         try {
             movieService.delete(id);
             return new ResponseEntity<>(HttpStatus.OK);

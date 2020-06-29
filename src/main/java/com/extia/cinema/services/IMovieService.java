@@ -6,8 +6,8 @@ import java.util.List;
 
 public interface IMovieService {
     List<Movie> findAll();
-    Movie findById(Integer id);
+    Movie findById(Long id);
     Movie create(Movie movie);
     Movie update(Movie movie);
-    void delete(Integer id);
+    void delete(Long id);
 }
