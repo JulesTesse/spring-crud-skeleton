@@ -29,7 +29,7 @@ public class MovieController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Movie> getOneById(@PathVariable("id") Integer id) {
+    public ResponseEntity<Movie> getOneById(@PathVariable("id") Long id) {
         try {
             Movie movie = movieService.findById(id);
             return new ResponseEntity<>(movie, HttpStatus.OK);
@@ -62,7 +62,7 @@ public class MovieController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity delete(@PathVariable("id") Integer id){
+    public ResponseEntity delete(@PathVariable("id") Long id){
         try {
             movieService.delete(id);
             return new ResponseEntity<>(HttpStatus.OK);

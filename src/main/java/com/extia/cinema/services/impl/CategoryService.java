@@ -24,7 +24,7 @@ public class CategoryService implements ICategoryService {
     }
 
     @Override
-    public Category findById(Integer id) {
+    public Category findById(Long id) {
         Optional<Category> optionalCategory = categoryRepository.findById(id);
         if (optionalCategory.isEmpty()) {
             throw new NotFoundException("Category with id " + id + " not found");
@@ -48,7 +48,7 @@ public class CategoryService implements ICategoryService {
     }
 
     @Override
-    public void delete(Integer id) {
+    public void delete(Long id) {
         Category toDelete = this.findById(id);
         categoryRepository.delete(toDelete);
     }

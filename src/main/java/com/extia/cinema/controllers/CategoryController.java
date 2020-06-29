@@ -29,7 +29,7 @@ public class CategoryController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Category> getOneById(@PathVariable("id") Integer id) {
+    public ResponseEntity<Category> getOneById(@PathVariable("id") Long id) {
         try{
             Category category = categoryService.findById(id);
             return new ResponseEntity<>(category, HttpStatus.OK);
@@ -62,7 +62,7 @@ public class CategoryController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity delete(@PathVariable("id") Integer id){
+    public ResponseEntity delete(@PathVariable("id") Long id){
         try {
             categoryService.delete(id);
             return new ResponseEntity<>(HttpStatus.OK);
